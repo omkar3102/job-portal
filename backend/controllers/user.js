@@ -76,6 +76,49 @@ const updateUser = async (req, res) => {
     }
 }
 
+// const uploadBulk = async (req, res) => {
+//     try {
+
+//         const dummyUserArray = [
+//             {
+//                 username: "john_doe",
+//                 emailId: "john@example.com",
+//                 password: "hashedpassword123", // Normally this would be a hashed value
+//                 role: "jobseeker"
+//             },
+//             {
+//                 username: "sarah_recruiter",
+//                 emailId: "sarah.hr@example.com",
+//                 password: "hashedpassword456",
+//                 role: "recruiter"
+//             },
+//             {
+//                 username: "mike_tech",
+//                 emailId: "mike@example.com",
+//                 password: "hashedpassword789",
+//                 role: "jobseeker"
+//             },
+//             {
+//                 username: "emma_recruiter",
+//                 emailId: "emma.hr@example.com",
+//                 password: "hashedpassword321",
+//                 role: "recruiter"
+//             },
+//             {
+//                 username: "lucas_dev",
+//                 emailId: "lucas@example.com",
+//                 password: "hashedpassword654",
+//                 role: "jobseeker"
+//             }
+//         ]
+        
+//         const bulkJob = await User.insertMany(dummyUserArray);
+//         res.status(200).json({success: true, message: "Bulk Job successful", data: bulkJob})
+//     } catch (e) {
+//         console.error("Could not bulk upload", e.message)
+//     }
+//     }
+
 
 
 
@@ -83,5 +126,6 @@ module.exports = {
     createUser,
     getUser,
     getUserById,
-    updateUser
+    updateUser,
+    // uploadBulk
 }
